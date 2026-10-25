@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="820" viewBox="0 0 1400 820" role="img" aria-labelledby="title description">
+  <title id="title">AIR HANDOFF の二つの顔 — 開発予定</title>
+  <desc id="description">開発予定の構想図。顔1「ベテランの隣で」では、AI案と人の指示を比較し、理由を一言添え、判断ログに記録して人が確認・承認します。承認済みの判断ログを、顔2「新人を教える」につなぎます。承認済みの場面から出題し、回答を検証・解説し、条件を変えて練習します。AIの候補と新人の回答は、生成とは独立したシミュレーター・採点器で検証します。新人のつまずきをベテランに返すことは追加目標です。</desc>
+  <defs>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="9" refY="6" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M 1 1 L 10 6 L 1 11" fill="none" stroke="#315F59" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+    <marker id="feedback-arrow" markerWidth="10" markerHeight="10" refX="7" refY="5" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M 1 1 L 8 5 L 1 9" fill="none" stroke="#8C8C7D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+  </defs>
+  <style>
+    text { font-family: "Noto Sans JP", "Yu Gothic", "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif; fill: #292D2B; }
+    .small { font-size: 19px; }
+    .step { font-size: 26px; font-weight: 600; }
+    .muted { fill: #6B7068; }
+    .teal { fill: #315F59; }
+    .terra { fill: #975D49; }
+  </style>
+  <rect width="1400" height="820" rx="24" fill="#F7F6F0"/>
+  <rect x="1" y="1" width="1398" height="818" rx="23" fill="none" stroke="#E3E3D9" stroke-width="2"/>
+
+  <!-- Title and explicit implementation status. -->
+  <text x="64" y="62" font-size="16" font-weight="700" letter-spacing="3" class="teal">AIR HANDOFF / CONCEPT</text>
+  <text x="64" y="116" font-size="39" font-weight="700">ひとつの判断が、次の学びになる。</text>
+  <rect x="1060" y="56" width="276" height="64" rx="16" fill="#EBEADF"/>
+  <text x="1198" y="82" text-anchor="middle" font-size="19" font-weight="700">開発予定の構想</text>
+  <text x="1198" y="105" text-anchor="middle" font-size="15" class="muted">Planned architecture</text>
+
+  <!-- Face 1. -->
+  <rect x="64" y="167" width="552" height="372" rx="22" fill="#FFFFFF" stroke="#C8D7D0" stroke-width="2"/>
+  <path d="M 86 167 H 594 Q 616 167 616 189 V 202 H 64 V 189 Q 64 167 86 167 Z" fill="#E4EEE7"/>
+  <text x="95" y="194" font-size="16" font-weight="700" letter-spacing="2" class="teal">FACE 1</text>
+  <text x="95" y="249" font-size="34" font-weight="700">ベテランの隣で</text>
+  <text x="95" y="282" font-size="21" class="teal">Learn from veterans</text>
+  <line x1="115" y1="329" x2="115" y2="480" stroke="#D9E6DF" stroke-width="3"/>
+
+  <circle cx="115" cy="334" r="21" fill="#E4EEE7"/>
+  <text x="115" y="341" text-anchor="middle" font-size="18" font-weight="700" class="teal">1</text>
+  <text x="153" y="344" class="step">AI案と人の指示を比較</text>
+
+  <circle cx="115" cy="399" r="21" fill="#E4EEE7"/>
+  <text x="115" y="406" text-anchor="middle" font-size="18" font-weight="700" class="teal">2</text>
+  <text x="153" y="409" class="step">判断の理由を一言添える</text>
+
+  <circle cx="115" cy="464" r="21" fill="#315F59"/>
+  <text x="115" y="471" text-anchor="middle" font-size="18" font-weight="700" style="fill:#FFFFFF">3</text>
+  <text x="153" y="469" class="step">判断ログに記録・承認</text>
+  <text x="153" y="502" class="small muted">教材に使う前に、人が確認する</text>
+
+  <!-- Approved knowledge crosses between the two faces. -->
+  <text x="700" y="327" text-anchor="middle" font-size="20" font-weight="700" class="teal">承認済み</text>
+  <text x="700" y="356" text-anchor="middle" font-size="20" font-weight="700" class="teal">判断ログ</text>
+  <path d="M 630 389 H 770" fill="none" stroke="#315F59" stroke-width="4" marker-end="url(#arrow)"/>
+  <text x="700" y="424" text-anchor="middle" font-size="15" class="muted">Approved log</text>
+
+  <!-- Face 2. -->
+  <rect x="784" y="167" width="552" height="372" rx="22" fill="#FFFFFF" stroke="#E1CFC3" stroke-width="2"/>
+  <path d="M 806 167 H 1314 Q 1336 167 1336 189 V 202 H 784 V 189 Q 784 167 806 167 Z" fill="#F3E7DE"/>
+  <text x="815" y="194" font-size="16" font-weight="700" letter-spacing="2" class="terra">FACE 2</text>
+  <text x="815" y="249" font-size="34" font-weight="700">新人を教える</text>
+  <text x="815" y="282" font-size="21" class="terra">Train newcomers</text>
+  <line x1="835" y1="329" x2="835" y2="480" stroke="#EEDFD4" stroke-width="3"/>
+
+  <circle cx="835" cy="334" r="21" fill="#F3E7DE"/>
+  <text x="835" y="341" text-anchor="middle" font-size="18" font-weight="700" class="terra">1</text>
+  <text x="873" y="344" class="step">承認済みの場面から出題</text>
+
+  <circle cx="835" cy="399" r="21" fill="#F3E7DE"/>
+  <text x="835" y="406" text-anchor="middle" font-size="18" font-weight="700" class="terra">2</text>
+  <text x="873" y="409" class="step">回答を検証・解説</text>
+
+  <circle cx="835" cy="464" r="21" fill="#975D49"/>
+  <text x="835" y="471" text-anchor="middle" font-size="18" font-weight="700" style="fill:#FFFFFF">3</text>
+  <text x="873" y="469" class="step">条件を変えて練習</text>
+  <text x="873" y="502" class="small muted">見落とした条件を、次の判断へ</text>
+
+  <!-- Verification is shared by both modes, independent of generation. -->
+  <rect x="64" y="570" width="1272" height="88" rx="17" fill="#EAEBE2"/>
+  <rect x="88" y="594" width="107" height="39" rx="10" fill="#D7DFD3"/>
+  <text x="141" y="620" text-anchor="middle" font-size="18" font-weight="700" class="teal">独立検証</text>
+  <text x="220" y="605" font-size="25" font-weight="700">AIの候補も、新人の回答も、シミュレーター／採点器で検証</text>
+  <text x="220" y="637" font-size="18" class="muted">Generated suggestions and trainee answers are evaluated independently.</text>
+
+  <!-- Optional feedback is intentionally lighter and dashed. -->
+  <path d="M 1060 678 V 725 Q 1060 735 1050 735 H 350 Q 340 735 340 725 V 678" fill="none" stroke="#8C8C7D" stroke-width="2" stroke-dasharray="5 8" stroke-linecap="round" marker-end="url(#feedback-arrow)"/>
+  <rect x="413" y="714" width="574" height="42" rx="21" fill="#F7F6F0"/>
+  <text x="700" y="741" text-anchor="middle" font-size="21" class="muted">新人のつまずきをベテランへ（追加目標）</text>
+  <text x="700" y="785" text-anchor="middle" font-size="16" class="muted">Veteran judgment → approved knowledge → practice → feedback</text>
+</svg>

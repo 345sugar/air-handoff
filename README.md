@@ -1,8 +1,18 @@
 # AIR HANDOFF
 
+Created by a former air traffic controller.  
+AI captures why veterans make decisions and turns approved reasoning into training for newcomers.  
+The AIR HANDOFF MVP will be built with Claude Code during **Nov 2–10, 2026**, on an existing Narita tower simulator.  
+For simulation-based training only; not connected to live air traffic control.
+
 **空のバトンを、次の管制官へ。**
 
 ベテラン管制官の「なぜ、そう判断したか」を言葉にし、次の世代の学びにつなぐAI教育支援プロジェクトです。既存の成田管制塔シミュレーターを土台に、AIの提案と人の判断の差分を記録し、理由・解説・練習課題へ変える仕組みを作ります。
+
+![既存のNARITA TOWERシミュレーター。航空機の3D表示、右上のレーダー、管制操作パネル。](docs/assets/narita-simulator.jpg)
+
+*既存の土台：NARITA TOWERの実画面。AIR HANDOFFのAI教育支援機能は開発予定です。*  
+*Existing simulator screenshot; AIR HANDOFF's AI training features are planned.*
 
 **BUILT WITH CLAUDE: JAPAN 2026 応募用／開発前のREADME**  
 更新日：2026年10月25日。AIR HANDOFF本体の開発予定期間は、応募用デモページに記載した **2026年11月2日〜11月10日** です。
@@ -17,11 +27,19 @@
 
 動画内のAIR HANDOFF操作画面はコンセプトのイメージです。既存シミュレーターの公開URLは、Hackathonで新規開発するAI教育支援機能の完成版を示すものではありません。
 
+**ポスターの表記について：** デモページの航空機にある「ANTHROPIC AI」塗装は**非公式オマージュ**です。Anthropicの公認・協賛を示すものではありません。  
+The “ANTHROPIC AI” aircraft livery on the demo poster is an unofficial homage and does not imply Anthropic endorsement or sponsorship.
+
 ## 何を解決するか
 
 管制の無線に残るのは指示であり、判断の理由は残りにくい。風、視程、距離、滑走距離、交信のテンポなどをどう組み合わせて判断したかが、ベテラン個人の経験の中にとどまっています。
 
 AIR HANDOFFは、ベテランが添える一言を記録し、振り返りと新人教育に使える形にします。
+
+![AIR HANDOFFの二つの顔：ベテランの判断と理由を記録・承認し、そのログから新人向けの問い・解説・練習を作る。開発予定の構成図。](docs/assets/two-faces.svg)
+
+*二つの顔：ベテランから学ぶAIと、新人を教えるAI。構成図は開発予定を示しています。*  
+*Planned workflow: learn from veterans, then train newcomers using approved judgment logs.*
 
 1. **ベテランからAIへ**：同じ場面に対するAI案と実際の指示を比べ、違いと理由を残す。
 2. **AIから新人へ**：確認・承認された判断をもとに、問い、解説、練習課題を作る。
@@ -42,7 +60,7 @@ AIR HANDOFFは、ベテランが添える一言を記録し、振り返りと新
 | Hackathonで新規開発 | 判断ログ一覧と承認状態の管理 | 開発予定 |
 | Hackathonで新規開発 | ログの場面を使う訓練生モード、回答判定・解説・練習課題生成 | 開発予定 |
 
-このリポジトリは、現時点ではREADMEによる企画・開発範囲の整理段階です。既存シミュレーターのコード・素材はまだ同梱していません。開発開始時に、再利用するコード・素材と新規実装の範囲を記録します。
+このリポジトリは、現時点ではREADMEと説明用画像による企画・開発範囲の整理段階です。既存シミュレーターのコード・3D素材はまだ同梱していません。開発開始時に、再利用するコード・素材と新規実装の範囲を記録します。
 
 ## Hackathonで実装するMVP
 
@@ -65,7 +83,7 @@ Claudeには、候補生成、理由の整理、解説、練習課題の生成�
 
 ## デモで扱う場面
 
-舞台は **成田RWY16R**。出発機がA2で待機し、到着機は6 NM、向かい風20 kt、視程良好という架空の条件で、**「到着機の前に出すか、降りてから出すか」**を扱います。
+舞台は **成田RWY16R**。出発機がA2で待機し、到着機は6 NM、向かい風20 kt、視程良好という架空の条件で、「到着機の前に出すか、降りてから出すか」を扱います。
 
 1. 同じ場面を見たAIが、検証済みの候補と根拠を提示する。
 2. ベテランが指示を選び、AI案との差分に理由を添える。
