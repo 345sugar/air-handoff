@@ -23,7 +23,7 @@ For simulation-based training only; not connected to live air traffic control.
 | --- | --- |
 | デモ動画・企画紹介 | **[AIR HANDOFF — デモ動画を見る](https://claude.ai/artifact/YBNU72JwoZEvSTGSksR9xT)**（8分44秒、日本語ナレーション） |
 | AIR HANDOFFのリポジトリ | **[github.com/345sugar/air-handoff](https://github.com/345sugar/air-handoff)** |
-| 既存のシミュレーター | [NARITA TOWER — ブラウザ版](https://narita-atc-tower-game.open-flute-7444.chatgpt.site/?scenario=01) |
+| 既存のシミュレーター | [NARITA TOWER — ブラウザ版](https://air-handoff-narita-demo.netlify.app/?scenario=01) |
 
 動画内のAIR HANDOFF操作画面はコンセプトのイメージです。既存シミュレーターの公開URLは、Hackathonで新規開発するAI教育支援機能の完成版を示すものではありません。
 
